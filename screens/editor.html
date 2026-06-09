@@ -1,0 +1,65 @@
+<div class="editor-topbar">
+  <span class="editor-filepath" id="editor-filepath">No file open</span>
+  <div class="editor-topbar-actions">
+    <button class="icon-btn" id="btn-editor-search" title="Search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    </button>
+    <button class="icon-btn" id="btn-editor-settings" title="Settings">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+    </button>
+  </div>
+</div>
+
+<div class="tab-bar" id="tab-bar">
+  <!-- Tabs injected by editor.js -->
+</div>
+
+<div class="editor-pane" id="editor-pane">
+  <div class="editor-empty" id="editor-empty">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+    <p>Open or create a file to start editing</p>
+  </div>
+
+  <div class="line-numbers" id="line-numbers" style="display:none;"></div>
+
+  <div style="flex:1;position:relative;display:none;" id="editor-content-wrap">
+    <div class="active-line-bg" id="active-line-bg"></div>
+    <div class="code-highlight" id="code-highlight" aria-hidden="true"></div>
+    <textarea
+      class="code-input"
+      id="code-input"
+      spellcheck="false"
+      autocomplete="off"
+      autocorrect="off"
+      autocapitalize="off"
+      aria-label="Code editor"
+      placeholder="Start coding..."
+    ></textarea>
+  </div>
+</div>
+
+<div class="editor-statusbar" id="editor-statusbar">
+  <span id="statusbar-pos">Ln 1, Col 1</span>
+  <span class="statusbar-lang" id="statusbar-lang">—</span>
+  <span id="statusbar-chars">0 chars</span>
+</div>
+
+<div class="kbd-toolbar" id="kbd-toolbar">
+  <button class="kbd-key" data-insert="{ }"  data-cursor="-2">{  }</button>
+  <button class="kbd-key" data-insert="( )"  data-cursor="-2">(  )</button>
+  <button class="kbd-key" data-insert="[ ]"  data-cursor="-2">[  ]</button>
+  <button class="kbd-key" data-insert="&lt;&gt;" data-cursor="-1">&lt;&gt;</button>
+  <button class="kbd-key" data-insert="&quot;&quot;" data-cursor="-1">&quot;&quot;</button>
+  <button class="kbd-key" data-insert="''"  data-cursor="-1">''</button>
+  <button class="kbd-key" data-insert="  "  data-cursor="0">⇥ Tab</button>
+  <button class="kbd-key" data-insert="#">#</button>
+  <button class="kbd-key" data-insert="=">=</button>
+  <button class="kbd-key" data-insert="+"  >+</button>
+  <button class="kbd-key" data-insert="-"  >-</button>
+  <button class="kbd-key" data-insert="*"  >*</button>
+  <button class="kbd-key" data-insert="/"  >/</button>
+  <button class="kbd-key" data-insert=":"  >:</button>
+  <button class="kbd-key" id="kbd-undo" title="Undo">
+    <svg viewBox="0 0 24 24"><polyline points="9 10 4 15 9 20"/><path d="M20 4v7a4 4 0 01-4 4H4"/></svg>
+  </button>
+</div>
