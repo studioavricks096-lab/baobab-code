@@ -1,0 +1,107 @@
+/* ============================================================
+   Baobab Code — settings.css
+   ============================================================ */
+
+#screen-settings { padding-bottom: 20px; }
+
+.settings-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 20px 14px;
+  border-bottom: 1px solid var(--border);
+}
+.settings-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* ── Row ─────────────────────────────────────────────────────── */
+.setting-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  border-bottom: 1px solid var(--border);
+  gap: 12px;
+}
+.setting-label {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+.setting-sub {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+.setting-value {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+.setting-value svg { width: 13px; height: 13px; color: var(--text-muted); }
+
+/* ── Card row ────────────────────────────────────────────────── */
+.setting-card {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 13px 20px;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  transition: background var(--transition);
+}
+.setting-card:active { background: var(--bg-card2); }
+.setting-card-icon {
+  width: 38px; height: 38px;
+  background: var(--bg-highlight);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.setting-card-icon svg { width: 18px; height: 18px; }
+.setting-card-body { flex: 1; }
+.setting-card-label { font-size: 14px; font-weight: 500; color: var(--text-primary); }
+.setting-card-sub   { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+.setting-card-right { font-size: 12px; color: var(--text-muted); flex-shrink: 0; }
+
+/* ── Theme preview thumbnail ─────────────────────────────────── */
+.theme-thumb {
+  width: 60px; height: 36px;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--border2);
+  overflow: hidden;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.theme-thumb-inner { width: 100%; height: 100%; }
+
+/* ── Themes grid ─────────────────────────────────────────────── */
+.themes-scroll {
+  display: flex;
+  gap: 10px;
+  padding: 12px 20px 14px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  border-bottom: 1px solid var(--border);
+}
+.themes-scroll::-webkit-scrollbar { display: none; }
+
+.theme-item { display: flex; flex-direction: column; align-items: center; gap: 5px; cursor: pointer; }
+.theme-swatch {
+  width: 56px; height: 40px;
+  border-radius: var(--radius-sm);
+  border: 2px solid transparent;
+  overflow: hidden;
+  transition: border-color var(--transition);
+}
+.theme-swatch.selected { border-color: var(--accent-cyan); box-shadow: var(--glow-sm); }
+.theme-swatch-fill { width: 100%; height: 100%; }
+.theme-name { font-size: 10px; color: var(--text-muted); text-align: center; }
