@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kivodian</title>
+
+    <link rel="stylesheet" href="./style.css">
+    
+</head>
+
+<body>
+
+    <main class="container">
+
+ <header class="header">
+
+ <div class="brand">
+    <img
+        src="./assets/kivodian-mark.png"
+        alt="Kivodian"
+        class="brand-logo"
+    >
+</div>
+
+    <h1>Good Morning</h1>
+
+    <p>Today's Important Things</p>
+
+    <p class="status">
+        ✓ Saved on this device
+    </p>
+
+</header>
+
+      <section id="reminderArea" class="reminder-area hidden">
+
+    <h2>Reminders for today</h2>
+
+    <div id="reminderList"></div>
+
+      </section>
+      
+        <section id="taskList" class="task-list">
+
+            <div class="empty-state">
+                <h2>Nothing important yet.</h2>
+
+                <p>
+                    Tap the + button when something
+                    is worth remembering.
+                </p>
+            </div>
+
+        </section>
+
+        <button id="addButton" class="add-button">
+            +
+        </button>
+
+    </main>
+
+    <!-- Capture Modal -->
+
+    <div id="captureModal" class="modal hidden">
+
+        <div class="modal-content">
+
+            <h2>
+                What should tomorrow's you remember?
+            </h2>
+
+            <input
+                id="captureInput"
+                type="text"
+                placeholder="Example: Order millet">
+
+          <label for="reminderSelect" class="reminder-label">
+    Reminder
+</label>
+
+<select id="reminderSelect" class="reminder-select">
+
+    <option value="none">
+        No reminder
+    </option>
+
+    <option value="tomorrow">
+        Tomorrow
+    </option>
+
+</select>
+          
+            <div class="button-row">
+
+                <button id="cancelButton">
+                    Cancel
+                </button>
+
+                <button id="saveButton">
+                    Done
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+    
+        <!-- Edit Modal -->
+
+    <div id="editModal" class="modal hidden">
+
+        <div class="modal-content">
+
+            <h2>
+                Edit reminder
+            </h2>
+
+            <input
+                id="editInput"
+                type="text"
+                placeholder="Edit your reminder">
+
+            <div class="button-row">
+
+                <button id="editCancelButton">
+                    Cancel
+                </button>
+
+                <button id="editSaveButton">
+                    Save
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Delete Confirmation Modal -->
+
+    <div id="deleteModal" class="modal hidden">
+
+        <div class="modal-content">
+
+            <h2>
+                Delete reminder?
+            </h2>
+
+            <p id="deleteMessage">
+                Are you sure you want to delete this reminder?
+            </p>
+
+            <div class="button-row">
+
+                <button id="deleteCancelButton">
+                    Cancel
+                </button>
+
+                <button id="deleteConfirmButton">
+                    Delete
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
